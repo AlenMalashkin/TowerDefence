@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55774f14-aa27-4bbb-8b4a-bfe29ee03db8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/Enemy/IEnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerRegenerate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Containers/EnemyContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/Enemy/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DisplayEnemyKilledCount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerWeaponBoughtState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerWeaponUpgradeButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Currency/Bank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DisplayCurrencyCount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LookAtCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Currency/CurrencyType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Towers/TowerClickHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Towers/TowerWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Towers/TowerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TowerProjectiles/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/ButtonEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Towers/TowerEquipment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/TriggerObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Towers/TowerWeaponLevelUps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/Enemy/EnemyFactoryInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IHealth.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyTriggerObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/Enemy/IEnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/TriggerObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LookAtCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Lifebars/Towers/TowerLifebar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Lifebars/Lifebar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyPlane/EnemyPlane.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGamePanelsViewer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerWeaponBoughtState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TowerProjectiles/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerWeaponLevelUps.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/TowerWeaponLevelUps.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/TowerEquipment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/TowerWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/TowerClickHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currency/CurrencyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DisplayCurrencyCount.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currency/Bank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerWeaponUpgradeButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerUpgradePanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Containers/EnemyContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/StatsIncreace.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/DefineStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStatsUpscaler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DisplayEnemyKilledCount.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/Enemy/EnemyFactoryInvoker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/Tower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/TowerType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Towers/TowerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Panels/TowerUpgradePanel/TowerRegenerate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/Enemy/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NgXWBZZ6GU0G1mUIPTd0WMuqL5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55774f14-aa27-4bbb-8b4a-bfe29ee03db8" name="Default Changelist" comment="" />
+      <created>1680086731171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680086731171</updated>
+      <workItem from="1680086739846" duration="2178000" />
+      <workItem from="1680177717702" duration="4341000" />
+      <workItem from="1680192401053" duration="5605000" />
+      <workItem from="1680243657721" duration="7925000" />
+      <workItem from="1680262551040" duration="10926000" />
+      <workItem from="1680358378185" duration="2648000" />
+      <workItem from="1680369119773" duration="10637000" />
+      <workItem from="1680520912271" duration="5156000" />
+      <workItem from="1680617148741" duration="5191000" />
+      <workItem from="1680674972024" duration="10266000" />
+      <workItem from="1680711911168" duration="8976000" />
+      <workItem from="1680885584987" duration="6403000" />
+      <workItem from="1680949446686" duration="9052000" />
+      <workItem from="1681037331054" duration="4042000" />
+      <workItem from="1681066458497" duration="2398000" />
+      <workItem from="1681112139945" duration="1802000" />
+      <workItem from="1681364937264" duration="3587000" />
+      <workItem from="1681377969696" duration="2000000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="431" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1681067240369">
+      <screen x="0" y="0" width="1536" height="912" />
+    </state>
+    <state x="431" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1536.912@0.0.1536.912" timestamp="1681067240369" />
+  </component>
+</project>
