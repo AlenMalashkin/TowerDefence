@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -58,6 +59,6 @@ public class Game : MonoBehaviour
     private void EndGame()
     {
         PlayerPrefs.DeleteKey("Money");
-        Debug.Log("Game ended");   
+        SceneManager.LoadScene("End");
     }
 }
