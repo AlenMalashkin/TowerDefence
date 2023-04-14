@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
     public UnityEvent<Enemy> EnemyKilledEvent = new UnityEvent<Enemy>();
     public EnemyType type;
-    
-    [Header("Depends")]
+
+    [Header("Depends")] [SerializeField] private Animator animator;
     [SerializeField] private TriggerObserver triggerObserver;
     [SerializeField] private EnemyAttack enemyAttack;
     [SerializeField] private EnemyMove enemyMove;
@@ -18,11 +15,12 @@ public class Enemy : MonoBehaviour
 
     [Header("Particulars")] 
     [SerializeField] private int amountOfMoney;
-    
+
     private Tower _tower;
 
     public void SetTargetTower(Tower tower)
     {
+        animator.SetBool("Run", true);
         _tower = tower;
     }
     
@@ -56,16 +54,20 @@ public class Enemy : MonoBehaviour
     
     private void OnTriggerEntered(Collider other)
     {
-        if (other.TryGetComponent(out Tower tower))
+        if (other.TryGetComponent(out Tower tower) && tower.type == _tower.type)
         {
+            animator.SetBool("Run", false);
+            animator.SetBool("Attack", true);
             enemyAttack.EnableAttack(tower);
         }
     }
 
     private void OnTriggerExited(Collider other)
     {
-        if (other.TryGetComponent(out Tower tower))
+        if (other.TryGetComponent(out Tower tower) && tower.type == _tower.type)
         { 
+            animator.SetBool("Attack", false);
+            animator.SetBool("Run", true);
             enemyAttack.DisableAttack();
             enemyMove.Move(_tower.transform.position); 
         }
