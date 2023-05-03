@@ -12,7 +12,6 @@ public class Tower : MonoBehaviour
     [SerializeField] private Lifebar lifebar;
 
     public TowerEquipment TowerEquipment => towerEquipment;
-    public TowerClickHandler TowerClickHandler => towerClickHandler;
     public TowerHealth TowerHealth => towerHealth;
     
     private void OnEnable()
@@ -23,10 +22,17 @@ public class Tower : MonoBehaviour
     private void OnDisable()
     {
         towerHealth.OnTowerHealthValueChangedEvent -= OnTowerHealthValueChanged;
-        OnTowerDestroyedEvent?.Invoke(type);
     }
 
-    private void OnDestroy()
+    private void OnTowerHealthValueChanged(int health)
+    {
+        if (health <= 0)
+            DestroyTower();
+        
+        lifebar.UpdateLifebar(health, towerHealth.MaxTowerHealth);
+    }
+
+    private void DestroyTower()
     {
         OnTowerDestroyedEvent?.Invoke(type);
     }
@@ -34,10 +40,5 @@ public class Tower : MonoBehaviour
     public void TakeDamage(int damage)
     {
         towerHealth.TakeDamage(damage);
-    }
-
-    private void OnTowerHealthValueChanged(int health)
-    {
-        lifebar.UpdateLifebar(health, towerHealth.MaxTowerHealth);
     }
 }

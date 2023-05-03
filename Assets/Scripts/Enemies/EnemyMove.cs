@@ -24,7 +24,7 @@ public class EnemyMove : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Stop()
+    public void Stop()
     {
         _agent.enabled = false;
     }

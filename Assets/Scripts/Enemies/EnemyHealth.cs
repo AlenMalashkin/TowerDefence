@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour, IHealth
 {
     public event Action<int> OnEnemyHealthValueChanged;
-
+    
     public int MaxHealth
     {
         get => _maxHealth;

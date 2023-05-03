@@ -1422,6 +1422,7 @@ GameObject:
   - component: {fileID: 8735134796285095345}
   - component: {fileID: 8735134796285095356}
   - component: {fileID: 8735134796285095349}
+  - component: {fileID: 3709772631215652957}
   - component: {fileID: 8735134796285095357}
   - component: {fileID: 8735134796285095347}
   - component: {fileID: 8735134796285095346}
@@ -1486,6 +1487,25 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &3709772631215652957
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735134796285095354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a110df7385bd4a941a80f0155cff70a3, type: 3}
+  m_Controller: {fileID: 9100000, guid: b1194d04f190cbf43b938435b9296952, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8735134796285095357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,13 +1522,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   type: 0
-  animator: {fileID: 766501920090524079}
+  animator: {fileID: 3709772631215652957}
   triggerObserver: {fileID: 8735134797947957700}
   enemyAttack: {fileID: 8735134796285095347}
   enemyMove: {fileID: 8735134796285095346}
   enemyHealth: {fileID: -3567936983055679824}
   lifebar: {fileID: 1463069570262587885}
-  amountOfMoney: 25
+  dieSfx: {fileID: 8300000, guid: 416db1490ce353b45825e966bba3101a, type: 3}
+  amountOfMoney: 60
 --- !u!114 &8735134796285095347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,7 +1666,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8381690129657870825}
-  - component: {fileID: 766501920090524079}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -1669,22 +1689,3 @@ Transform:
   m_Father: {fileID: 8735134796285095345}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &766501920090524079
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9158754216592270163}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: a110df7385bd4a941a80f0155cff70a3, type: 3}
-  m_Controller: {fileID: 9100000, guid: b1194d04f190cbf43b938435b9296952, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

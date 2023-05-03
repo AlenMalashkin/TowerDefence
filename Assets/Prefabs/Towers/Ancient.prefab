@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d160b8cdc89a9b34b802f5a29cd85851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTowerHealth: 1000
+  maxTowerHealth: 100
   regenerationByTimeTick: 0
   regenerationTime: 0
 --- !u!1 &1857756847392636772

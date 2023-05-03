@@ -4,12 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
+    [SerializeField] private AudioClip music;
+    
     [Header("Scene Objects")]
     [SerializeField] private Tower[] towers;
     [SerializeField] private EnemyFactory[] factories;
+    [SerializeField] private DisplayEnemyKilledCount displayEnemyKilledCount;
 
     private void OnEnable()
     {
+        SoundPlayer.Instance.PlayMusic(music);
+        
         foreach (var tower in towers)
         {
             tower.OnTowerDestroyedEvent += OnTowerDestroyed;
@@ -27,6 +32,8 @@ public class Game : MonoBehaviour
         {
             tower.OnTowerDestroyedEvent -= OnTowerDestroyed;
         }
+        
+        SoundPlayer.Instance.StopMusic();
     }
 
     private void OnTowerDestroyed(TowerType towerType)
@@ -42,22 +49,30 @@ public class Game : MonoBehaviour
                 if (factory.type == towerType)
                 {
                     factory.type = TowerType.Ancient;
-
+            
                     var enemies = factory
                         .EnemyContainer
                         .GetEnemies();
-
+            
                     foreach (var enemy in enemies)
                     {
                         enemy.SetTargetTower(Array.Find(towers, tower => tower.type == TowerType.Ancient));
                     }
                 }
-            }
+            }    
         }
+        
     }
 
     private void EndGame()
     {
+        Debug.Log("Game ended");
+        
+        if (PlayerPrefs.GetInt("Record") < displayEnemyKilledCount.EnemyKilledCount || !PlayerPrefs.HasKey("Record"))
+        {
+            PlayerPrefs.SetInt("Record", displayEnemyKilledCount.EnemyKilledCount);
+        }
+
         PlayerPrefs.DeleteKey("Money");
         SceneManager.LoadScene("End");
     }

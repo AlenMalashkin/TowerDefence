@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TowerWeapon : MonoBehaviour
@@ -6,18 +7,22 @@ public class TowerWeapon : MonoBehaviour
     [SerializeField] private TriggerObserver triggerObserver;
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private Projectile projectilePrefab;
+    [SerializeField] private AudioClip shotSound;
     [SerializeField] private float shootCooldown;
     [SerializeField] private int damage;
 
     public int Level => _level;
     
     private int _level = 1;
-    private List<Enemy> _enemies = new List<Enemy>();
+    private List<Enemy> _enemies;
+    private Enemy _target;
     private float _currentShootCooldown;
     private bool _isShooting;
 
     private void OnEnable()
     {
+        _enemies = new List<Enemy>();
+        
         triggerObserver.OnTriggerEnteredEvent += OnTriggerEntered;
     }
 
@@ -45,11 +50,30 @@ public class TowerWeapon : MonoBehaviour
     {
         if (_enemies.Count != 0)
         {
-            transform.LookAt(_enemies[0].transform);
-            CountCooldown();
+            _target = _enemies[0];
 
-            if (CooldownIsUp())
-                Shoot();
+            if (_target.IsDied)
+            {
+                foreach (var enemy in _enemies)
+                {
+                    if (!enemy.IsDied)
+                    {
+                        _target = enemy;
+                        break;
+                    }
+                }
+            }
+
+            if (!_target.IsDied)
+            {
+                transform.LookAt(_target.transform);
+                            
+                CountCooldown();
+            
+                if (CooldownIsUp())
+                    Shoot();     
+            }
+                           
         }
     }
 
@@ -57,8 +81,8 @@ public class TowerWeapon : MonoBehaviour
     {
         if (other.TryGetComponent(out Enemy enemy))
         {
-            enemy.EnemyKilledEvent.AddListener(EnemyKilled);
             _enemies.Add(enemy);
+            enemy.EnemyKilledEvent.AddListener(EnemyKilled);
         }
     }
 
@@ -79,5 +103,6 @@ public class TowerWeapon : MonoBehaviour
         var projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation, projectileSpawnPoint);
         projectile.SetProjectileDamage(damage);
         projectile.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+        SoundPlayer.Instance.PlaySfx(shotSound);
     }
 }

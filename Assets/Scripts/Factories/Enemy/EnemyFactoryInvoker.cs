@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using VavilichevGD.Utils.Timing;
 using Random = UnityEngine.Random;
@@ -6,35 +5,46 @@ using Random = UnityEngine.Random;
 public class EnemyFactoryInvoker : MonoBehaviour
 {
     [SerializeField] private EnemyFactory enemyFactory;
+    [SerializeField] private float timeToDecreaceInvoke;
     [SerializeField] private float minTime;
     [SerializeField]  private float maxTime;
 
-    private SyncedTimer _timer;
+    private SyncedTimer _factoryInvokeTimer;
+    private SyncedTimer _decreaceInvokeTimer;
 
     private void OnEnable()
     {
-        _timer = new SyncedTimer(TimerType.UpdateTick);
+        _factoryInvokeTimer = new SyncedTimer(TimerType.UpdateTick);
+        _decreaceInvokeTimer = new SyncedTimer(TimerType.UpdateTick);
 
-        _timer.TimerFinished += InvokeFactory;
+        _factoryInvokeTimer.TimerFinished += InvokeFactory;
+        _decreaceInvokeTimer.TimerFinished += DecreaceInvokeTime;
         
-        _timer.Start(Random.Range(minTime, maxTime));
+        _factoryInvokeTimer.Start(Random.Range(minTime, maxTime));
+        _decreaceInvokeTimer.Start(timeToDecreaceInvoke);
     }
 
     private void OnDisable()
     {
-        _timer.TimerFinished -= InvokeFactory;
+        _factoryInvokeTimer.TimerFinished -= InvokeFactory;
+        _decreaceInvokeTimer.TimerFinished -= DecreaceInvokeTime;
+    }
+
+    private void DecreaceInvokeTime()
+    {
+        if (minTime > 0.1f)
+            minTime -= 0.1f;
+
+        if (maxTime > 0.2f)
+            maxTime -= 0.1f;
+
+        _decreaceInvokeTimer.Start(timeToDecreaceInvoke);
     }
 
     private void InvokeFactory()
     {
         enemyFactory.CreateEnemy();
-
-        if (minTime > 0.1f)
-            minTime -= 0.01f;
-
-        if (maxTime > 0.2f)
-            maxTime -= 0.01f;
-                
-        _timer.Start(Random.Range(minTime, maxTime));
+        
+        _factoryInvokeTimer.Start(Random.Range(minTime, maxTime));
     }
 }

@@ -9,6 +9,7 @@ public class DisplayCurrencyCount : MonoBehaviour
     private void OnEnable()
     {
         Bank.Instance.OnCurrencyValueChanged += OnCurrencyValueChanged;
+        PlayerPrefs.DeleteKey(Bank.Instance._currencySavePathesMap[CurrencyType.Money]);
         currencyAmountText.text = PlayerPrefs.GetInt(Bank.Instance._currencySavePathesMap[CurrencyType.Money]) + "";
     }
 

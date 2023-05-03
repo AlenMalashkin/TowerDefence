@@ -12,7 +12,6 @@ public class TowerClickHandler : MonoBehaviour ,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log(eventData.pointerClick.name);
         upgradePanel.OpenPanel();
         upgradePanel.Init(
                         _tower.TowerEquipment.GetActiveWeapons()

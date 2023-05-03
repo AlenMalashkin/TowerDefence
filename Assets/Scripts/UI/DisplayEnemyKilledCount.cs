@@ -8,7 +8,9 @@ public class DisplayEnemyKilledCount : MonoBehaviour
     
     [SerializeField] private Text text;
 
-    private int _enemyKilledCount = 0;
+    public int _enemyKilledCount = 0;
+
+    public int EnemyKilledCount => _enemyKilledCount;
 
     private void Awake()
     {

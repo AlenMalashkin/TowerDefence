@@ -14,14 +14,21 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Lifebar lifebar;
 
     [Header("Particulars")] 
+    [SerializeField] private AudioClip dieSfx;
     [SerializeField] private int amountOfMoney;
 
+    public bool IsDied => _died;
+    
     private Tower _tower;
+    private bool _died;
 
     public void SetTargetTower(Tower tower)
     {
-        animator.SetBool("Run", true);
-        _tower = tower;
+        if (!_died)
+        {
+             animator.SetBool("Run", true);
+             _tower = tower;   
+        }
     }
     
     public void SetEnemyStats(int damage, int maxHealth, float attackRate)
@@ -47,9 +54,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        enemyMove.Move(_tower.transform.position);
-
-        enemyAttack.Attack();
+        if (!_died)
+        {
+             enemyMove.Move(_tower.transform.position);
+        }
     }
     
     private void OnTriggerEntered(Collider other)
@@ -83,8 +91,19 @@ public class Enemy : MonoBehaviour
     
     private void Die()
     {
-        EnemyKilledEvent.Invoke(this);
+        _died = true;
+        GetComponent<Collider>().enabled = false;
+        animator.SetBool("Attack", false);
+        animator.SetBool("Run", false);
+        animator.SetBool("Died", true);
+        enemyMove.Stop();
+        SoundPlayer.Instance.PlaySfx(dieSfx);
+    }
+
+    private void OnDied()
+    { 
         Bank.Instance.GetMoney(CurrencyType.Money, amountOfMoney);
+        EnemyKilledEvent.Invoke(this);
         Destroy(gameObject);
     }
 }

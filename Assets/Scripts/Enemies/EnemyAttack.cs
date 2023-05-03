@@ -35,15 +35,10 @@ public class EnemyAttack : MonoBehaviour
         _isAttacking = false;
     }
 
-    public void Attack()
+    private void OnAttack()
     {
-        CountCooldown();
-
-        if (CanAttack())
-        {
+        if (_target != null)
             _target.TakeDamage(_damage);
-            _currentAttackCooldown = _attackCooldown;
-        }
     }
 
     private void CountCooldown()

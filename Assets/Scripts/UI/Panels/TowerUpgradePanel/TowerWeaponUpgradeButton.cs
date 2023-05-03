@@ -65,6 +65,7 @@ public class TowerWeaponUpgradeButton : MonoBehaviour
             levelText.text = "Уровень: " + _towerEquipment
                                            .TowerWeapons[weaponIndex]
                                            .Level;
+            costText.text = _costByUpgrade + "";
          
             boughtState = TowerWeaponBoughtState.Bought;   
         }
@@ -82,7 +83,10 @@ public class TowerWeaponUpgradeButton : MonoBehaviour
             .TowerWeapons[weaponIndex]
             .LevelUp();
 
-            UpdateUI(boughtState, level);            
+            UpdateUI(boughtState, 
+                _towerEquipment
+                .TowerWeapons[weaponIndex]
+                .Level);         
         }
     }
 
